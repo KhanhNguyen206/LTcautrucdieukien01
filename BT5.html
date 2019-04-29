@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT5</title>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend>Xếp loại học lực</legend>
+        <p>Nhập vao đây điểm kiểm tra:</p>
+        <input type="number" id="soa">
+        <p>Nhập vào đấy điểm thi giữa kỳ:</p>
+        <input type="number" id="sob">
+        <p>Nhập vào đây điểm thi cuối kỳ:</p>
+        <input type="number" id="soc">
+        <br>
+        <br>
+        <input type="button" onclick="kiemtra()" value="Kiểm tra">
+        <br><br>
+        <input type="text" id="hienthi">
+    </fieldset>
+</form>
+<script>
+    function kiemtra() {
+        let a = parseInt(document.getElementById("soa").value);
+        let b = parseInt(document.getElementById("sob").value);
+        let c = parseInt(document.getElementById("soc").value);
+        let kq=(a+b*2+c*3)/6;
+        alert(kq);
+        if(kq<5){
+            document.getElementById("hienthi").value= "Học sinh này k được lên lớp";
+        }else {
+            if(kq>5 && kq<6.5){
+                document.getElementById("hienthi").value= "Học sinh trung bình";
+            }else {
+                if(kq>6.5 && kq<8){
+                    document.getElementById("hienthi").value= "học sinh khá";
+                }else{
+                    document.getElementById("hienthi").value= "học sinh giỏi"
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

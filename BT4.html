@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiemtrasolonnhat</title>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend>Kiếm tra số lớn nhất</legend>
+        <p>Nhập vao đây số a:</p>
+        <input type="number" id="soa">
+        <p>Nhập vào đấy số b:</p>
+        <input type="number" id="sob">
+        <p>Nhập vào đấy số c:</p>
+        <input type="number" id="soc">
+        <br>
+        <br>
+        <input type="button" onclick="kiemtra()" value="Kiểm tra">
+        <br>
+        <input type="text" id="hienthi">
+    </fieldset>
+</form>
+<script>
+    function kiemtra() {
+        let a = parseInt(document.getElementById("soa").value);
+        let b = parseInt(document.getElementById("sob").value);
+        let c = parseInt(document.getElementById("soc").value);
+        if (a>b){
+            if(a>c){
+                document.getElementById("hienthi").value= a+" là số lớn nhất";
+            }else{
+                document.getElementById("hienthi").value= c+" là số lớn nhất";
+            }
+        }else {
+            if (b>c){
+                document.getElementById("hienthi").value= b +" là số lớn nhất";
+            }else{
+                document.getElementById("hienthi").value= c +" là số lớn nhất"
+            }
+
+        }
+    }
+</script>
+</body>
+</html>

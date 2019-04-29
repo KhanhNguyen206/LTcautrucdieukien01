@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT2</title>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend>Kiểm tra tuổi vào lớp 10</legend>
+        <br>
+        <p>Nhập tuổi vào đây:</p>
+        <input id="nhap" type="number">
+        <input type="button" value="Kiểm tra" onclick="kiemtra()">
+    </fieldset>
+</form>
+<script>
+    function kiemtra() {
+        let a=parseInt(document.getElementById("nhap").value);
+        if (a<16){
+            alert("Chưa đủ tuổi vào lớp 10");
+        }else{
+            alert("Đã đủ tuổi học lớp 10");
+        }
+}
+</script>
+</body>
+</html>

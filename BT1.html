@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT1</title>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend>Kiểm tra 2 số chia hết</legend>
+        <p>Nhập số a:</p>
+        <input type="number" id="soa">
+        <p>Nhập số b:</p>
+        <input type="number" id="sob">
+        <br><br>
+        <input type="button" value="Kiểm tra" onclick="tinh()">
+        <br>
+        <p>Kết quả:</p>
+        <input type="text" id="hienthi">
+    </fieldset>
+</form>
+<script>
+function tinh() {
+    let a=parseInt(document.getElementById("soa").value);
+    let b=parseInt(document.getElementById("sob").value);
+    let c=a%b;
+    if (c==0){
+        alert("chiahet")
+        document.getElementById("hienthi").value = "a chia hết cho b";
+    }else{
+        document.getElementById("hienthi").value = "a không chia hết cho b";
+    }
+}
+</script>
+
+</body>
+</html>
